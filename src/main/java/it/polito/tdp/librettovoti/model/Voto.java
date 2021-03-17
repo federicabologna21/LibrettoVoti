@@ -2,13 +2,27 @@ package it.polito.tdp.librettovoti.model;
 
 import java.time.LocalDate;
 
+// POJO - Plain Old Java Object
+// Java Bean
+// Semplice contenitore di dati -- non ha "logica"
+
+/**
+ * Memorizza il risultato di un esame singolo
+ * 
+ * @author Fulvio
+ *
+ */
 public class Voto {
+	private String nome ;
+	private int voto ; // 30L come lo rappresento?
+	private LocalDate data ; // data superamento esame
 	
-	private String nome;
-	private int voto; // 30L come lo rappresento?
-	private LocalDate data; // data superamento esame
-	
-	
+	/**
+	 * Costruttore della classe Voto
+	 * @param nome Nome del corso superato
+	 * @param voto Voto ottenuto
+	 * @param data Data di superamento
+	 */
 	public Voto(String nome, int voto, LocalDate data) {
 		super();
 		this.nome = nome;
@@ -16,40 +30,33 @@ public class Voto {
 		this.data = data;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
-
 
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
 	public int getVoto() {
 		return voto;
 	}
-
 
 	public void setVoto(int voto) {
 		this.voto = voto;
 	}
 
-
 	public LocalDate getData() {
 		return data;
 	}
 
-
 	public void setData(LocalDate data) {
 		this.data = data;
 	}
-	
 
 	@Override
 	public String toString() {
-		// generato automaticamente con tasto dx/source/generate method...
-		return "Esame" + nome + " superato con " + voto + " il " + data ;
+		return "Esame " + nome + " superato con " + voto + " il " + data ;
 	}
+
 }
